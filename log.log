@@ -1,0 +1,171 @@
+2024-02-29 16:51:49,215 - Error: You don't have permission to DB.
+NoneType: None
+2024-02-29 16:54:49,079 - Error: You don't have permission to DB.
+2024-02-29 17:01:14,274 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2024-02-29 17:01:14,275 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1140, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 110, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 661, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 633, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 321, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2024-02-29 17:03:35,283 - ERROR: You don't have permission to DB or DB is empty.
+2024-02-29 17:03:43,485 - ERROR: You don't have permission to DB or DB is empty.
+2024-02-29 17:03:44,928 - ERROR: You don't have permission to DB or DB is empty.
+2024-02-29 17:37:44,465 - ERROR: You don't have permission to DB or DB is empty.
+2024-02-29 22:22:34,614 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+2024-02-29 22:22:34,614 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/e.polyakov/Downloads/DEPLOY_BOT/dep_bot.py", line 45, in handle_message
+    bot.send_message(message.chat.id, f"Всем привет! Планируем сейчас запустить!\n"
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1673, in send_message
+    apihelper.send_message(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+
+2024-02-29 22:22:34,654 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+2024-02-29 22:22:34,654 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/e.polyakov/Downloads/DEPLOY_BOT/dep_bot.py", line 50, in handle_message
+    bot.send_message(message.chat.id, "Серч строится: руки убрать от кнопки деплоя.")
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1673, in send_message
+    apihelper.send_message(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+
+2024-02-29 22:22:34,675 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+2024-02-29 22:22:34,675 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/e.polyakov/Downloads/DEPLOY_BOT/dep_bot.py", line 45, in handle_message
+    bot.send_message(message.chat.id, f"Всем привет! Планируем сейчас запустить!\n"
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1673, in send_message
+    apihelper.send_message(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+
+2024-02-29 22:22:34,728 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+2024-02-29 22:22:34,728 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/e.polyakov/Downloads/DEPLOY_BOT/dep_bot.py", line 45, in handle_message
+    bot.send_message(message.chat.id, f"Всем привет! Планируем сейчас запустить!\n"
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1673, in send_message
+    apihelper.send_message(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 42
+
+2024-02-29 22:22:58,521 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 18
+2024-02-29 22:22:58,522 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1141, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 149, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 7868, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/e.polyakov/Downloads/DEPLOY_BOT/dep_bot.py", line 74, in handle_message
+    bot.send_message(message.chat.id, "Деплой начат.")
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1673, in send_message
+    apihelper.send_message(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 264, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 429. Description: Too Many Requests: retry after 18
+
+2024-02-29 23:03:01,377 - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2024-02-29 23:03:01,377 - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1140, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 110, in raise_exceptions
+    raise self.exception_info
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 92, in run
+    task(*args, **kwargs)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 661, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 633, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 321, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 164, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/e.polyakov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 191, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2024-03-01 11:47:57,498 - ERROR: You don't have permission to DB or DB is empty.
+2024-03-01 11:48:19,258 - ERROR: You don't have permission to DB or DB is empty.
+2024-03-01 11:50:55,045 - ERROR: You don't have permission to DB or DB is empty.
+2024-03-01 11:51:30,058 - ERROR: You don't have permission to DB or DB is empty.
+2024-03-01 11:52:28,368 - ERROR: You don't have permission to DB or DB is empty.
+2024-03-01 12:05:28,886 - ERROR: You don't have permission to DB or DB is empty.
+2024-03-01 12:05:33,677 - ERROR: You don't have permission to DB or DB is empty.
